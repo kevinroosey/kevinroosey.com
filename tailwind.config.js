@@ -20,6 +20,7 @@ export default {
           900: 'hsl(var(--primary-900))',
           950: 'hsl(var(--primary-950))',
         },
+        background: 'hsl(var(--background))',
       }
     },
   },
