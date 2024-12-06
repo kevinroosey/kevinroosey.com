@@ -21,6 +21,7 @@ export default {
           950: 'hsl(var(--primary-950))',
         },
         background: 'hsl(var(--background))',
+        secondary: 'hsl(var(--secondary))',
       }
     },
   },
