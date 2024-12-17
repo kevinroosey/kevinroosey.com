@@ -5,16 +5,17 @@ type ProjectCardProps = {
     title: string;
     description: string;
     image: string;
+    stack?: string[];
 };
 
 
-export default function ProjectCard({ title, description, image }: ProjectCardProps) {
+export default function ProjectCard({ title, description, image, stack }: ProjectCardProps) {
 
-   const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
     return (
         <>
-            <div className='flex gap-4 hover:bg-secondary p-2 rounded-lg cursor-pointer' onClick={() => setIsOpen(!isOpen)}>
+            <div className='flex gap-4 hover:bg-neutral-100 p-2 rounded-lg cursor-pointer' onClick={() => setIsOpen(!isOpen)}>
                 <div>
                     <img src={image} alt='TrabaIcon' className='w-12 h-12 rounded-md' />
                 </div>
@@ -23,8 +24,13 @@ export default function ProjectCard({ title, description, image }: ProjectCardPr
                     <p className='text-neutral-800 cursor-pointer'>{description}</p>
                 </div>
             </div>
-            <ProjectDialog title={title} isOpen={isOpen} setIsOpen={setIsOpen} />        
-        
+            <ProjectDialog
+                title={title}
+                isOpen={isOpen}
+                setIsOpen={setIsOpen}
+                description={description}
+                stack={stack}
+            />
         </>
     )
 }

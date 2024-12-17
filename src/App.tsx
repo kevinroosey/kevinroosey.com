@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <div className='min-h-screen min-w-screen max-h-full bg-background py-10'>
+      <div className='min-h-screen min-w-screen max-h-full bg-white py-10'>
         <div className='w-full xl:w-[500px] mx-auto flex flex-col gap-12'>
           <div className='w-full flex items-center mx-auto'>
             <Header />
@@ -25,6 +25,7 @@ function App() {
                 title='Traba'
                 description='Tailor your resume to each application using AI'
                 image='/TrabaLogo.svg'
+                stack={['openai', 'nextjs2', 'reactjs', 'tailwindcss', 'go', 'docker']}
               />
               <ProjectCard
                 title='SEC Scraper'

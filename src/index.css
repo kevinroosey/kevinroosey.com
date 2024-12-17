@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: 'Poppins', sans-serif;
+}
 
 :root {
   --primary-50: 210, 20%, 99%;
