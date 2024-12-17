@@ -8,19 +8,21 @@ type ProjectDialogProps = {
     isOpen: boolean;
     stack?: string[];
     setIsOpen: (isOpen: boolean) => void;
+    link: string;
+    image: string;
 };
 
 
-export default function ProjectDialog({ title, isOpen, setIsOpen, description, stack }: ProjectDialogProps) {
+export default function ProjectDialog({ title, isOpen, setIsOpen, description, stack, link, image }: ProjectDialogProps) {
     return (
         <>
-            <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="relative z-50">
+            <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="relative z-50 ">
                 <DialogBackdrop className="fixed inset-0 bg-black/30" />
 
                 <div className="fixed inset-0 flex w-screen items-center justify-center">
-                    <DialogPanel className="bg-neutral-50 w-[700px] p-4 h-fit rounded-xl">
+                    <DialogPanel className="bg-neutral-50 w-full m-2 lg:w-[700px] p-2 lg:p-4 h-fit rounded-xl">
                         <div className="">
-                            <img src="./TrabaImage.svg" alt="Traba image" className="w-full rounded-lg">
+                            <img src={`./${image}`} alt="Traba image" className="w-full rounded-lg">
                             </img>
                         </div>
                         <div className="py-4">
@@ -46,7 +48,7 @@ export default function ProjectDialog({ title, isOpen, setIsOpen, description, s
                                 onClick={() => setIsOpen(false)}
                                 variant="primary"
                                 className="mt-4"
-                                link="https://gettraba.com"
+                                link={link}
                             />
                         </div>
                     </DialogPanel>
