@@ -19,16 +19,16 @@ export default function ProjectDialog({ title, isOpen, setIsOpen, description, s
         <AnimatePresence>
             <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="relative z-50 ">
                 <DialogBackdrop className="fixed inset-0 bg-black/30 backdrop-blur-sm" />
-
-                <div className="fixed inset-0 flex w-screen items-center justify-center">
-                    <motion.div
+                <motion.div
                             initial={{ y: 100 }}
                             animate={{ y: 0 }}
                             exit={{ opacity: 0 }}
                             transition={{ duration: 0.1 }}
                             
                         >  
-                    <DialogPanel className="bg-neutral-50 w-full m-2 w-full lg:w-[700px] p-2 lg:p-4 h-fit rounded-xl">
+                <div className="fixed inset-0 flex w-screen items-center justify-center mx-auto">
+                    
+                    <DialogPanel className="bg-neutral-50 w-full w-full lg:w-[700px] p-2 lg:p-4 h-fit rounded-xl m-2">
                         
                         <div className="aspect-[4/2] w-full">
                         <img 
@@ -45,11 +45,7 @@ export default function ProjectDialog({ title, isOpen, setIsOpen, description, s
                                 {description}
                             </Description>
                         </div>
-                        <div className="w-full flex flex-wrap gap-3">
-                            {stack?.map((tech) => (
-                                <img src={`./icons/${tech}.svg`} alt={tech} className="w-6 h-6" />
-                            ))}
-                        </div>
+                        
                         <div className="flex w-full justify-end gap-4">
                             <ButtonComponent
                                 text="Close"
@@ -66,8 +62,9 @@ export default function ProjectDialog({ title, isOpen, setIsOpen, description, s
                             />
                         </div>
                     </DialogPanel>
-                    </motion.div>
+                    
                 </div>
+                </motion.div>
             </Dialog>
         </AnimatePresence>
         </>

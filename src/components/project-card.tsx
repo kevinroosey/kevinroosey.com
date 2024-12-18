@@ -10,7 +10,7 @@ export default function ProjectCard({ title, description, image, stack, link, ic
 
     return (
         <>
-            <div className='flex gap-4 hover:bg-neutral-100 p-2 rounded-lg cursor-pointer' onClick={() => setIsOpen(!isOpen)}>
+            <div className='flex items-center gap-4 hover:bg-neutral-100 p-2 rounded-lg cursor-pointer' onClick={() => setIsOpen(!isOpen)}>
                 <div>
                     <img src={icon} alt='TrabaIcon' className='w-16 lg:w-12 lg:h-12 rounded-lg' />
                 </div>
