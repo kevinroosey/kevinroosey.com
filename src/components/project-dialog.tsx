@@ -16,16 +16,19 @@ type ProjectDialogProps = {
 export default function ProjectDialog({ title, isOpen, setIsOpen, description, stack, link, image }: ProjectDialogProps) {
     return (
         <>
+        <AnimatePresence>
             <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="relative z-50 ">
-                <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/30"
-            />
+                <DialogBackdrop className="fixed inset-0 bg-black/30 backdrop-blur-sm" />
 
                 <div className="fixed inset-0 flex w-screen items-center justify-center">
                     <DialogPanel className="bg-neutral-50 w-full m-2 lg:w-[700px] p-2 lg:p-4 h-fit rounded-xl">
+                        <motion.div
+                            initial={{ y: -100 }}
+                            animate={{ y: 0 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.75 }}
+                            
+                        />  
                         <div className="aspect-[4/2] w-full">
                         <img 
                             src={`./${image}`} 
@@ -62,6 +65,7 @@ export default function ProjectDialog({ title, isOpen, setIsOpen, description, s
                     </DialogPanel>
                 </div>
             </Dialog>
+        </AnimatePresence>
         </>
     )
 
