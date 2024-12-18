@@ -28,7 +28,7 @@ export default function Links() {
             <div>
                 <a href="mailto@kevinroosey@gmail.com" className="text-white">
                     <div className="flex gap-1 items-center">
-                        <Icons.gitHub className="h-4 w-4" />
+                        <Icons.gitHub />
                         <span className="text-white text-xs">kevinroosey</span>
                     </div>
                 </a>
