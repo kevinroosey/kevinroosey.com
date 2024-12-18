@@ -21,9 +21,12 @@ export default function ProjectDialog({ title, isOpen, setIsOpen, description, s
 
                 <div className="fixed inset-0 flex w-screen items-center justify-center">
                     <DialogPanel className="bg-neutral-50 w-full m-2 lg:w-[700px] p-2 lg:p-4 h-fit rounded-xl">
-                        <div className="aspect-[4/2]">
-                            <img src={`./${image}`} alt="Traba image" className="w-full rounded-lg">
-                            </img>
+                        <div className="aspect-[4/2] w-full">
+                        <img 
+                            src={`./${image}`} 
+                            alt="Traba image" 
+                            className="w-full h-full object-cover rounded-lg" 
+                        />
                         </div>
                         <div className="py-4">
                             <DialogTitle className="text-2xl font-semibold text-primary-900">{title}</DialogTitle>
