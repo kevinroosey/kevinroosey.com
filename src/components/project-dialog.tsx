@@ -28,13 +28,15 @@ export default function ProjectDialog({ title, isOpen, setIsOpen, description, s
                             transition={{ duration: 0.1 }}
                             
                         >  
-                    <DialogPanel className="bg-neutral-50 w-full m-2 lg:w-[700px] p-2 lg:p-4 h-fit rounded-xl">
+                    <DialogPanel className="bg-neutral-50 w-full m-2 w-full lg:w-[700px] p-2 lg:p-4 h-fit rounded-xl">
                         
                         <div className="aspect-[4/2] w-full">
                         <img 
                             src={`./${image}`} 
                             alt="Traba image" 
                             className="w-full h-full object-cover rounded-lg mx-auto" 
+                            height={1211}
+                            width={2164}
                         />
                         </div>
                         <div className="py-4">
