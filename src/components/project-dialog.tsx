@@ -6,14 +6,14 @@ type ProjectDialogProps = {
     title: string;
     description: string;
     isOpen: boolean;
-    stack?: string[];
+
     setIsOpen: (isOpen: boolean) => void;
     link: string;
     image: string;
 };
 
 
-export default function ProjectDialog({ title, isOpen, setIsOpen, description, stack, link, image }: ProjectDialogProps) {
+export default function ProjectDialog({ title, isOpen, setIsOpen, description,  link, image }: ProjectDialogProps) {
     return (
         <>
         <AnimatePresence>

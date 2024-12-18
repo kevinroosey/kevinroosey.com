@@ -53,7 +53,7 @@ function App() {
                   description={project.description}
                   image={project.image}
                   icon={project.icon}
-                  stack={project.stack}
+                  
                   link={project.link}
                 />
               ))}

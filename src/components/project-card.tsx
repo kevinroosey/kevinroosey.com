@@ -4,7 +4,7 @@ import { Project } from "../App";
 
 
 
-export default function ProjectCard({ title, description, image, stack, link, icon }: Project) {
+export default function ProjectCard({ title, description, image, link, icon }: Project) {
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -24,7 +24,7 @@ export default function ProjectCard({ title, description, image, stack, link, ic
                 isOpen={isOpen}
                 setIsOpen={setIsOpen}
                 description={description}
-                stack={stack}
+
                 link={link!}
                 image={image}
             />
