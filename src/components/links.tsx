@@ -4,7 +4,7 @@ import { MenuSeparator } from "@headlessui/react";
 
 export default function Links() {
     return (
-        <div className="bg-gradient-to-t from-neutral-800 to-neutral-700 border-2 border-neutral-500 h-fit w-fit rounded-xl flex justify-center items-center bottom-5 fixed gap-4 px-4 py-2 mx-auto right-0 left-0">
+        <div className="bg-gradient-to-t from-neutral-800 to-neutral-700 border-2 border-neutral-500 h-fit w-fit rounded-xl flex justify-center items-center bottom-5 fixed gap-1 lg:gap-4 px-1 lg:px-4 py-2 mx-auto right-0 left-0">
             <div>
                 <a href="/x.com/itskevin" className="text-white">
                 <div className="flex gap-1 items-center">
