@@ -1,6 +1,6 @@
 import { Dialog, DialogTitle, DialogPanel, Description, DialogBackdrop } from "@headlessui/react";
 import ButtonComponent from "./button";
-
+import { AnimatePresence, motion } from 'framer-motion'
 
 type ProjectDialogProps = {
     title: string;
@@ -17,7 +17,12 @@ export default function ProjectDialog({ title, isOpen, setIsOpen, description, s
     return (
         <>
             <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="relative z-50 ">
-                <DialogBackdrop className="fixed inset-0 bg-black/30" />
+                <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 bg-black/30"
+            />
 
                 <div className="fixed inset-0 flex w-screen items-center justify-center">
                     <DialogPanel className="bg-neutral-50 w-full m-2 lg:w-[700px] p-2 lg:p-4 h-fit rounded-xl">
