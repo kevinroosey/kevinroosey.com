@@ -1,4 +1,5 @@
 import './App.css'
+import Links from './components/links';
 import Header from './components/navbar'
 import ProjectCard from './components/project-card'
 
@@ -59,6 +60,12 @@ function App() {
 
             </div>
 
+          </div>
+          <div className='mx-auto'>
+            <Links />
+          </div>
+          <div>
+            <h1 className="text-left text-xl font-semibold text-primary-800">Writing</h1>
           </div>
         </div>
       </div>
