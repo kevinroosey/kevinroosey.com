@@ -21,7 +21,7 @@ export default function ProjectDialog({ title, isOpen, setIsOpen, description, s
 
                 <div className="fixed inset-0 flex w-screen items-center justify-center">
                     <DialogPanel className="bg-neutral-50 w-full m-2 lg:w-[700px] p-2 lg:p-4 h-fit rounded-xl">
-                        <div className="">
+                        <div className="aspect-[4/2]">
                             <img src={`./${image}`} alt="Traba image" className="w-full rounded-lg">
                             </img>
                         </div>
