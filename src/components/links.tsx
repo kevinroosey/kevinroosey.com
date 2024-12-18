@@ -9,7 +9,7 @@ export default function Links() {
                 <a href="https://x.com/itskevin" className="text-neutral-200 hover:text-white">
                 <div className="flex gap-1 items-center text-neutral-200 hover:text-white">
                     <Icons.twitter className="h-4 w-4" />
-                    <span className=" text-xs">@itskevin</span>
+                    <span className="text-xs">@itskevin</span>
                 </div>
                 </a>
             </div>
