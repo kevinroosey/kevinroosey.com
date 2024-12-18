@@ -21,19 +21,20 @@ export default function ProjectDialog({ title, isOpen, setIsOpen, description, s
                 <DialogBackdrop className="fixed inset-0 bg-black/30 backdrop-blur-sm" />
 
                 <div className="fixed inset-0 flex w-screen items-center justify-center">
-                    <DialogPanel className="bg-neutral-50 w-full m-2 lg:w-[700px] p-2 lg:p-4 h-fit rounded-xl">
-                        <motion.div
-                            initial={{ y: -100 }}
+                    <motion.div
+                            initial={{ y: 100 }}
                             animate={{ y: 0 }}
                             exit={{ opacity: 0 }}
-                            transition={{ duration: 0.75 }}
+                            transition={{ duration: 0.1 }}
                             
-                        />  
+                        >  
+                    <DialogPanel className="bg-neutral-50 w-full m-2 lg:w-[700px] p-2 lg:p-4 h-fit rounded-xl">
+                        
                         <div className="aspect-[4/2] w-full">
                         <img 
                             src={`./${image}`} 
                             alt="Traba image" 
-                            className="w-full h-full object-cover rounded-lg" 
+                            className="w-full h-full object-cover rounded-lg mx-auto" 
                         />
                         </div>
                         <div className="py-4">
@@ -63,6 +64,7 @@ export default function ProjectDialog({ title, isOpen, setIsOpen, description, s
                             />
                         </div>
                     </DialogPanel>
+                    </motion.div>
                 </div>
             </Dialog>
         </AnimatePresence>
