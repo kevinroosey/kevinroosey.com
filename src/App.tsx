@@ -19,7 +19,7 @@ const projects: Project[] = [{
   image: '/TrabaImage.svg',
   stack: ['openai', 'nextjs2', 'reactjs', 'tailwindcss', 'go', 'docker'],
   link: 'https://gettraba.com'
-}, {
+},{
   title: 'SEC Scraper',
   description: 'Query thousands of 10-K reports with a simple API',
   icon: '/SEC.svg',
@@ -33,7 +33,7 @@ function App() {
   return (
     <>
       <div className='min-h-screen min-w-screen max-h-full bg-white py-10 p-2'>
-        <div className='w-full xl:w-[500px] mx-auto flex flex-col gap-12'>
+        <div className='w-full xl:w-[500px] mx-auto flex flex-col gap-10'>
           <div className='w-full flex items-center mx-auto'>
             <Header />
           </div>
@@ -53,13 +53,10 @@ function App() {
                   description={project.description}
                   image={project.image}
                   icon={project.icon}
-                  
                   link={project.link}
                 />
               ))}
-
             </div>
-
           </div>
           <div className='mx-auto'>
             <Links />

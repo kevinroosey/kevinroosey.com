@@ -20,10 +20,10 @@ export default function ProjectDialog({ title, isOpen, setIsOpen, description,  
             <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="relative z-50 ">
                 <DialogBackdrop className="fixed inset-0 bg-black/30 backdrop-blur-sm" />
                 <motion.div
-                            initial={{ y: 100 }}
+                            initial={{ y: 10 }}
                             animate={{ y: 0 }}
                             exit={{ opacity: 0 }}
-                            transition={{ duration: 0.1 }}
+                            transition={{ duration: 0.025 }}
                             
                         >  
                 <div className="fixed inset-0 flex w-screen items-center justify-center mx-auto">
